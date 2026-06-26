@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kselis Pseudocode Sandbox</title>
+
+<!-- CodeMirror 5 Dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/darcula.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+
+<!-- Kselis Sandbox Assets -->
+<link rel="stylesheet" href="sandbox.css">
+<script src="sandbox.js" defer></script>
+</head>
+<body>
+
+<div id="app" class="sandbox-container">
+    <!-- Editor Panel -->
+    <div class="panel editor-panel">
+        <div class="panel-header">
+            <span>📝 Editor</span>
+            <div class="toolbar">
+                <button id="btn-run" class="run-btn">▶ Run</button>
+                <button id="btn-step">⏭ Step</button>
+                <button id="btn-reset">🔄 Reset</button>
+            </div>
+        </div>
+        <div id="editor" class="editor-container"></div>
+    </div>
+
+    <!-- Variables Panel -->
+    <div class="panel variables-panel">
+        <div class="panel-header"><span>{ } Variables</span></div>
+        <div id="variables" class="variables-content">
+            <div class="term-system">No variables defined yet.</div>
+        </div>
+    </div>
+    <div id="callstack-ui"></div>
+
+    <!-- Terminal Panel -->
+    <div class="panel terminal-panel">
+        <div class="panel-header"><span>>_ Terminal</span></div>
+        <div id="terminal" class="terminal-content">
+            <div class="term-system">Sandbox initialized. Ready.</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
